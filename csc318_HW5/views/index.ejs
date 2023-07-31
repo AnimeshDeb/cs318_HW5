@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Star Wars Quote App</title>
+    <link rel="stylesheet" href="../public/style.css">
+  </head>
+  <body class="bod">
+    <div class="container">
+      <div class="head">
+        <h1>May Node and Express be with you.</h1>
+      </div>
+      <div class="header">
+        <h2>Add Quotes</h2>
+        <form class="frm" action="/quotes" method="POST">
+          <input type="text" placeholder="name" name="name" />
+          <input type="text" placeholder="quote" name="quote" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="addVaderQuote">
+        <h2>Darth Vader invades!</h2>
+        <p>Replace first Yoda's quote with a quote written by Darth Vader</p>
+        <button id="update-button">Replace Yoda's quote</button>
+      </div>
+      <div class="removeVaderQuote">
+        <h2>Remove Darth Vader!</h2>
+        <p>
+          Delete one Darth Vader's quote. Does nothing if there are no more Darth
+          Vader's quote
+        </p>
+        <button id="delete-button">Delete Darth Vader's quote</button>
+        <div id="emptyHolder"></div>
+      </div>
+      <div class="allQuotes">
+        <h1>Quotes</h1>
+        <ul class="quotes">
+          <% for(var i = 0; i < quotes.length; i++) {%>
+          <li class="quote">
+            <span><%= quotes[i].name %></span>:
+            <span><%= quotes[i].quote %></span>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>

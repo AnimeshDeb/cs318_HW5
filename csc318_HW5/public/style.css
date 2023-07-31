@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0; 
+  }
+  
+  .container {
+    display: grid; 
+    grid-template-rows: repeat(5, auto); 
+    justify-content: center;
+    align-items: start; 
+    gap: 20px;
+  }
+  
+ 
+  .container > div {
+    width: 100%;
+  }
+  
+  
+  .header {
+    background-color:  #F8C291;
+    padding: 20px;
+  }
+  
+  .addVaderQuote,
+  .removeVaderQuote {
+    background-color:  #6A89CC;
+    padding: 20px;
+  }
+  
+  .allQuotes {
+    background-color: #82CCDD;
+    padding: 20px;
+  }
+  
